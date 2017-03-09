@@ -580,7 +580,7 @@
     }
 
     $('.dr-calendar', this.element)
-      .css('width', cal_width)
+      //.css('width', cal_width)
       .slideDown(200);
     $('.dr-input', this.element).addClass('dr-active');
     $(selected).addClass('dr-active').focus();

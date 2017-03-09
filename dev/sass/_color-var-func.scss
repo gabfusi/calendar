@@ -1,15 +1,16 @@
 // Colors
 $white: #FFFFFF;
-$blue: #2693D5;
+$blue: #257ed0;
 $moon: #EBF1F4;
 $body: #4f565c;
 $rat: #9BA3A7;
-$mouse: #C3CACD;
+$mouse: #d5d5d5;
 
 // Variables
 $font-family: "proxima-nova", Proxima Nova, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $rem-base: 16px;
 $radius: 5px;
+$calendar-dropdown-gutter: 12px;
 
 // Functions
 @function strip-unit($num) {
