@@ -27,17 +27,17 @@
         display: inline-block;
         position: absolute;
         bottom: auto;
-        border: 10px solid transparent;
+        border: rem(10) solid transparent;
         border-top: 0;
         z-index: 2;
       }
       &:before{
         border-bottom-color: $mouse;
-        bottom: - $calendar-dropdown-gutter - 1px;
+        bottom: - rem($calendar-dropdown-gutter) - rem(1);
       }
       &:after{
         border-bottom-color: $white;
-        bottom: - $calendar-dropdown-gutter - 2px;
+        bottom: - rem($calendar-dropdown-gutter) - rem(2);
       }
     }
   }
@@ -149,7 +149,7 @@
     .dr-calendar,
     .dr-preset-list {
       //padding-top: 5px;
-      top: $calendar-dropdown-gutter;
+      top: rem($calendar-dropdown-gutter);
       left: 0;
       z-index: 4;
       border: 1px solid $mouse;

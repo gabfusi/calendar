@@ -10,7 +10,7 @@ $mouse: #d5d5d5;
 $font-family: "proxima-nova", Proxima Nova, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $rem-base: 16px;
 $radius: 5px;
-$calendar-dropdown-gutter: 12px;
+$calendar-dropdown-gutter: 12;
 
 // Functions
 @function strip-unit($num) {
