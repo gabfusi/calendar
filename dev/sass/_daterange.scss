@@ -78,7 +78,6 @@
         outline: none;
         position: relative;
         height: 100%;
-        line-height: rem(19);
 
         &:hover, &:focus, &.dr-active {
           color: $blue;
@@ -99,6 +98,8 @@
         padding: 0 10px;
         flex-grow: 0;
         font-weight: 600;
+        height: 100%;
+        line-height: 40px;
       }
     }
     .dr-presets {
