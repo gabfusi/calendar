@@ -56,6 +56,7 @@ new Calendar({
     start: moment().subtract(1, 'year').startOf('year'),
     end: moment().subtract(1, 'year').endOf('year')
   }],
+  presets_icon: '<span>&#9660;</span>',
   callback: function() {
     var start = moment(this.start_date).format('ll'),
         end = moment(this.end_date).format('ll');

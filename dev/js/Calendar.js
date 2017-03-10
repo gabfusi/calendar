@@ -55,6 +55,8 @@
 
     this.presets =        settings.presets == false || this.type == 'single' ? false : true;
 
+    this.presets_icon =   settings.presets_icon || false;
+
     this.callback =       settings.callback || this.calendarSetDates;
 
     this.calendarHTML(this.type);
@@ -687,11 +689,14 @@
           '<div class="dr-date dr-date-end" contenteditable>'+ moment(this.end_date).format(this.format.input) +'</div>' +
         '</div>' +
 
-        (this.presets ? '<div class="dr-presets">' +
-          '<span class="dr-preset-bar"></span>' +
-          '<span class="dr-preset-bar"></span>' +
-          '<span class="dr-preset-bar"></span>' +
-        '</div>' : '') +
+        (this.presets ?
+          (this.presets_icon ? 
+          '<div class="dr-presets">' + this.presets_icon + '</div>' :
+          '<div class="dr-presets">' +
+            '<span class="dr-preset-bar"></span>' +
+            '<span class="dr-preset-bar"></span>' +
+            '<span class="dr-preset-bar"></span>' +
+          '</div>') : '') +
       '</div>' +
 
       '<div class="dr-selections">' +
