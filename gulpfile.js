@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     ghPages = require('gulp-gh-pages'),
     sass = require('gulp-sass'),
+    gp_rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
@@ -23,10 +24,21 @@ gulp.task('css', function() {
 gulp.task('js', function() {
   return gulp.src('dev/js/**/*.js')
     .pipe(newer('public/js'))
-    .pipe(uglify())
+    .pipe(uglify({}))
     .on('error', handleError)
     .pipe(gulp.dest('public/js'));
 });
+
+// Minify  task
+gulp.task('min', function() {
+  return gulp.src('dev/js/Calendar.js')
+    .pipe(gulp.dest('public/js'))
+    .pipe(gp_rename('Calendar.min.js'))
+    .pipe(uglify({ mangle: false }))
+    .on('error', handleError)
+    .pipe(gulp.dest('public/js'));
+});
+
 
 // Publish github page
 gulp.task('deploy', function() {
